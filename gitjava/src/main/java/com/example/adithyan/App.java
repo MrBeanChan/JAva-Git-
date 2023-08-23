@@ -1,10 +1,23 @@
 package com.example.adithyan;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
-        int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of element in array:");
+        n = sc.nextInt();
+        int[] arr = new int[n];
+
+        System.out.println("Enter the elements: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
         bubbleSort(arr);
-        System.out.println("Sorted array:");
+        System.out.println("\nSorted array:");
         for (int num : arr) {
             System.out.print(num + " ");
         }
